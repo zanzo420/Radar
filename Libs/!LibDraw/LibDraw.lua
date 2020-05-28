@@ -4,7 +4,7 @@ local LibDraw
 local sin, cos, atan, atan2, sqrt, rad = math.sin, math.cos, math.atan, math.atan2, math.sqrt, math.rad
 local tinsert, tremove = tinsert, tremove
 
-
+TraceLine = function(...) return lb.Raycast(...) end
 WorldToScreen = function (wX, wY, wZ)
 	local ResolutionCoef = WorldFrame:GetWidth() / lb.GetWindowSize()
 	local sX, sY = lb.WorldToScreen(wX, wY, wZ);

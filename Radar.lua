@@ -12,8 +12,9 @@ LibDraw.Sync(function()
             local tarBounding = ObjectBounding("target")
             
             if tx and ty and tz then
-                LibDraw.Text("TARGET!", "GameFontBlack", tx, ty, tz + tarBounding)
                 LibDraw.Line(px, py, pz, tx, ty, tz)
+                LibDraw.Text("TARGET!", "GameFontBlack", tx, ty, tz + tarBounding)
+                LibDraw.GroundCircle(tx, ty, tz, 12)
             end
         end
     end
